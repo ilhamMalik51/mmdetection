@@ -3,7 +3,7 @@ import warnings
 from pathlib import Path
 
 import mmcv
-import numpy as np
+import numpy as np 
 import torch
 from mmcv.ops import RoIPool
 from mmcv.parallel import collate, scatter
@@ -157,7 +157,7 @@ def inference_detector(model, imgs):
         results = model(return_loss=False, rescale=True, **data)
 
     if not is_batch:
-        return results[0]
+        return results
     else:
         return results
 
